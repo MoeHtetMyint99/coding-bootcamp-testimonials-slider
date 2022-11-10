@@ -1,0 +1,83 @@
+@use "../abstracts/" as *;
+
+.carousel{
+    max-width: 1110px;
+    width: 100%;
+    height: 540px;
+    position: relative;
+
+    &__container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 30px;
+        overflow-x: scroll;
+        
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+    }
+    &__button-box{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 46px;
+        right: 365px;
+        transform: translate(0, 50%);
+        width: 115px;
+        height: 55px;
+        background-color: white;
+
+        button{
+            width: 13px;
+            height: 18px;
+        }
+    }
+
+    // slide area
+    &__slide{
+        position: relative;
+        flex: 0 0 100%;
+        height: 100%;
+        padding-top: 165px;
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 38px;
+        width: 100%;
+        max-width: 635px;
+
+        p{
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 44px;
+        }
+        .info{
+            display: flex;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .name{
+
+        }
+        .status{
+            color: $grayish-blue;
+        }
+    }
+    &__right{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 540px;
+        height: 540px;
+        z-index: -1;
+    }
+    // slide area
+}
