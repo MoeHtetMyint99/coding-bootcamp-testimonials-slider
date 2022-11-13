@@ -8,7 +8,8 @@
   
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -18,93 +19,68 @@
 <body>
   <main class="container">
     <div class="carousel">
+      <div class="img-bg" aria-hidden="true"><img src="./images/pattern-bg.svg" alt=""></div>
+      <!-- ========== carousel container start ========== -->
       <div class="carousel__container">
         <!-- carousel button box start -->
-          <div class="carousel__button-box">
-            <button class="prev-button" aria-label="previous slide">
-              <img src="./images/icon-prev.svg" alt="" aria-hidden="true">
-            </button>
-            <button class="next-button" aria-label="next slide">
-              <img src="./images/icon-next.svg" alt="" aria-hidden="true">
-            </button>
-          </div>
+          <ul class="carousel__button-box">
+            <li>
+              <button class="prev-button btn" aria-label="previous slide" disabled="true">
+                <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+              </button>
+            </li> 
+            <li>
+              <button class="next-button btn" aria-label="next slide">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+              </button>
+            </li> 
+            
+          </ul>
         <!-- end of carousel button box -->
+        <!-- button box shadow start -->
+        <div class="carousel__button-box-shadow" aria-hidden="true"></div>
+        <!-- end of button box shadow -->
         <!-- carousel slide start -->
-        <div class="carousel__slide">
-          <div class="carousel__left">
+        <div class="carousel__slide" aria-hidden="false">
+          <article class="carousel__left">
             <p>
-              “ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future.
+              “ I’ve been interested in coding for a while but never taken the jump, until now. I couldn’t recommend this course enough. I’m now in the job of my dreams and so excited about the future. ""
             </p>
             <div class="info">
               <span class="name">Tanya Sinclair</span>
               <span class="status">UX Engineer</span>
             </div>
-          </div>
+          </article>
           <div class="carousel__right">
             <img src="./images/image-tanya.jpg" alt="tanya sinclair">
           </div>
         </div>
         <!-- end of carousel slide -->
         <!-- carousel slide start -->
-        <div class="carousel__slide">
-          <div class="carousel__left">
+        <div class="carousel__slide" aria-hidden="true">
+          <article class="carousel__left">
             <p>
-              If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as professional developer. ”
+              “ If you want to lay the best foundation possible I’d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as professional developer. ”
             </p>
             <div class="info">
               <span class="name">John Tarkpor</span>
               <span class="status">Junior Front-end Developer</span>
             </div>
-          </div>
+          </article>
           <div class="carousel__right">
             <img src="./images/image-john.jpg" alt="john tarkpor">
           </div>
         </div>
         <!-- end of carousel slide -->
       </div>
+      <!-- ========== end of carousel container ========== -->
     </div>
+    <!-- background svgs start -->
+    <div class="middle-bg" aria-hidden="true"><img src="./images/pattern-quotes.svg" alt=""></div>
+    <div class="bottom-bg" aria-hidden="true"><img src="./images/pattern-curve.svg" alt=""></div>
+    <!-- end of background svgs -->
   </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
-
-  Tanya Sinclair
-  UX Engineer
-
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
+<script src="./js/carousel.js"></script>
 </html>

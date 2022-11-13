@@ -7,6 +7,9 @@
     box-sizing: border-box;
     border: 0;
 }
+li{
+    list-style: none;
+}
 img{
     display: block;
     width: 100%;
@@ -17,17 +20,62 @@ body{
     font-family: 'Inter', sans-serif;
     color: $dark-blue;
 }
-button{
-    cursor: pointer;
-}
-button:hover,
-button:focus{
-    color: $dark-blue;
-}
+
 .container{
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 34px;
+    @include screenSize(medium){
+        align-items: flex-start;
+        padding-top: 54px;
+    }
+    @include screenSize(small){
+        overflow-x: hidden;
+    }
 }
+
+.img-bg,
+.middle-bg,
+.bottom-bg{
+    position: absolute;
+    z-index: -2;
+}
+
+.img-bg{
+    top: 0;
+    right: 0;
+    transform: translate(93px, -63px);
+    @include screenSize(medium){
+        width: 320px;
+        transform: translate(calc(-50%),calc(-24px));
+        left: 50%;
+    }
+}
+
+.middle-bg{
+    top: 160px;
+    left: 200px;
+    transform: translate(50%, 50%);
+    @include screenSize(large){
+        left: 50px;
+    }
+    @include screenSize(medium){
+        width: 60px;
+        top: 364px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.bottom-bg{
+    bottom: 0;
+    left: 0;
+    @include screenSize(medium){
+        width: 250px;
+    }
+}
+
