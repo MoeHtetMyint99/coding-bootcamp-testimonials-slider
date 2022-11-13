@@ -5,10 +5,10 @@
     padding: 5px 5px;
     background: white;
     color: $dark-blue;
-    font-size: 25px;
+    font-size: 2.5rem;
     transition: color 0.3s ease;
     @include screenSize(medium){
-        font-size: 16px;
+        font-size: 1.6rem;
     }
 
     &:hover,
